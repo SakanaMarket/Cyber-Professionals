@@ -112,4 +112,22 @@ public class Manager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Scenario").SetActive(false);
         playCanvas.transform.GetChild(1).gameObject.SetActive(true);
     }
+
+    public void RevealAnswer(Text a)
+    {
+        EnableResponse(a.text, a);
+    }
+
+    public void ClearInputFields(GameObject i)
+    {
+        i.GetComponent<TMP_InputField>().text = "";
+    }
+
+    public void CommunicatePoints(GameObject i, GameObject p)
+    {
+        string inp = i.GetComponent<TMP_InputField>().text; //team name
+        string pts = p.GetComponent<TMP_InputField>().text; // points
+
+
+    }
 }
