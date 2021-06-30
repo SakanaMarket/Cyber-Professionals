@@ -8,6 +8,7 @@ TagManager:
   - PlayCanvas
   - MainCanvas
   - TeamCanvas
+  - Scenario
   layers:
   - Default
   - TransparentFX

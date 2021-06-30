@@ -91,6 +91,7 @@ public class Manager : MonoBehaviour
     public void UpdateScore()
     {
         //string s = scorecard.GetComponent<TextMeshProUGUI>().text;
+        scorecard.transform.parent.gameObject.SetActive(!scorecard.transform.parent.gameObject.activeSelf);
         string s = "";
         foreach (KeyValuePair<string, int> item in Teams.OrderBy(key=>key.Value))
         {
@@ -98,5 +99,17 @@ public class Manager : MonoBehaviour
         }
 
         scorecard.GetComponent<TextMeshProUGUI>().text = s;
+    }
+
+    public void DisableButton(Button b)
+    {
+        b.interactable = false;
+        b.GetComponentInChildren<Text>().text = "0";
+    }
+
+    public void ReturnToLevels()
+    {
+        GameObject.FindGameObjectWithTag("Scenario").SetActive(false);
+        playCanvas.transform.GetChild(1).gameObject.SetActive(true);
     }
 }
