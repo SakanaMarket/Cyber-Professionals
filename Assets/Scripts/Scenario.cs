@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Scenario : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string answer;
 
-    // Update is called once per frame
-    void Update()
+    public void RevealAnswer()
     {
-        
+
     }
 }
