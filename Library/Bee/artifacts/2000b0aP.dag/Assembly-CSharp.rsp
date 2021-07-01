@@ -275,6 +275,7 @@
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Manager.cs"
+"Assets/Scripts/Scenario.cs"
 -langversion:8.0
 
 /deterministic

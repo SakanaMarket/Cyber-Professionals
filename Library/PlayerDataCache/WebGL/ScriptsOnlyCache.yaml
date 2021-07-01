@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Manager
+    - Scenario
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -24,9 +25,11 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -45,8 +48,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Outline
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Main.unity:
@@ -71,33 +76,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 2132}
+      Script: {instanceID: 1660}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2134}
     - Class: 114
-      Script: {instanceID: 2586}
+      Script: {instanceID: 2284}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2588}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 3076}
+      Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 4154}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 4436}
+      Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 5188}
+      Script: {instanceID: 4140}
     - Class: 114
-      Script: {instanceID: 5456}
+      Script: {instanceID: 4158}
     - Class: 114
-      Script: {instanceID: 5786}
+      Script: {instanceID: 4440}
     - Class: 114
-      Script: {instanceID: 6294}
+      Script: {instanceID: 4986}
     - Class: 114
-      Script: {instanceID: 6402}
+      Script: {instanceID: 5192}
     - Class: 114
-      Script: {instanceID: 6656}
+      Script: {instanceID: 5460}
+    - Class: 114
+      Script: {instanceID: 5790}
+    - Class: 114
+      Script: {instanceID: 5968}
+    - Class: 114
+      Script: {instanceID: 6298}
+    - Class: 114
+      Script: {instanceID: 6406}
+    - Class: 114
+      Script: {instanceID: 6660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,6 +280,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionEnterMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0b4bf3daff2f5c96de67d17cb57bd042
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scenario
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -741,7 +762,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 0074f96135c110a09d62a290a49d7a83
+      Hash: 0f102f2a650cb0b451ef400f12403bb7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Manager

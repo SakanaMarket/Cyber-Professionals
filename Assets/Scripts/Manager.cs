@@ -14,6 +14,8 @@ public class Manager : MonoBehaviour
     [SerializeField] private float TimetoDisappear;
     [SerializeField] GameObject playCanvas;
     [SerializeField] GameObject scorecard;
+    [SerializeField] GameObject teaminput;
+    [SerializeField] GameObject teampoints;
 
     private void Update()
     {
@@ -27,7 +29,7 @@ public class Manager : MonoBehaviour
             if (!string.IsNullOrEmpty(s))
             {
                 //Debug.Log(s);
-                Teams.Add(g.GetComponent<InputField>().text, 0);
+                Teams.Add(g.GetComponent<InputField>().text.ToUpper(), 0);
             }
 
         }
@@ -123,10 +125,21 @@ public class Manager : MonoBehaviour
         i.GetComponent<TMP_InputField>().text = "";
     }
 
-    public void CommunicatePoints(GameObject i, GameObject p)
+    public void CommunicatePoints(Text t)
     {
-        string inp = i.GetComponent<TMP_InputField>().text; //team name
-        string pts = p.GetComponent<TMP_InputField>().text; // points
+        string inp = teaminput.GetComponent<TMP_InputField>().text.ToUpper(); //team name
+        string pts = teampoints.GetComponent<TMP_InputField>().text; // points
+        int npts;
+        if (Teams.ContainsKey(inp) && int.TryParse(pts, out npts))
+        {
+            Teams[inp] += npts;
+            string s = pts + " points added to Team " + inp;
+            EnableResponse(s, t);
+        }
+        else
+        {
+            EnableResponse("Invalid Team Name or Point Distribution", t);
+        }
 
 
     }
