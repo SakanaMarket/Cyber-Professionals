@@ -23,6 +23,7 @@ public class Manager : MonoBehaviour
     }
     public void SetTeamNames(Text r)
     {
+        int count = 0;
         foreach (GameObject g in GameObject.FindGameObjectsWithTag("TeamInput"))
         {
             string s = g.GetComponent<InputField>().text;
@@ -31,17 +32,41 @@ public class Manager : MonoBehaviour
                 //Debug.Log(s);
                 Teams.Add(g.GetComponent<InputField>().text.ToUpper(), 0);
             }
+            else
+            {
+                count += 1;
+            }
 
         }
-        EnableResponse("Teams are Set!", r);
+        if (count >= 4)
+        {
+            EnableResponse("Invalid Teams!", r);
+        }
+        else
+        {
+            EnableResponse("Teams are Set!", r);
+        }
+        
     }
 
-    public void PrintTeams()
+    public void PrintTeams(Text r)
     {
-        foreach (KeyValuePair<string, int> s in Teams)
+        if (Teams.Count > 0)
         {
-            Debug.Log(s.Key + " " + s.Value);
+            string All_Teams = "";
+            foreach (KeyValuePair<string, int> s in Teams)
+            {
+                Debug.Log(s.Key + " " + s.Value);
+                All_Teams += "< " + s.Key + " >";
+            }
+            EnableResponse(All_Teams, r);
         }
+        else
+        {
+            EnableResponse("There Are No Teams!", r);
+        }
+
+        
     }
 
     public void ResetTeams(Text r)
@@ -124,6 +149,10 @@ public class Manager : MonoBehaviour
     {
         i.GetComponent<TMP_InputField>().text = "";
     }
+    public void ClearRegularInputFields(GameObject i)
+    {
+        i.GetComponent<InputField>().text = "";
+    }
 
     public void CommunicatePoints(Text t)
     {
@@ -142,5 +171,10 @@ public class Manager : MonoBehaviour
         }
 
 
+    }
+
+    public void InverseActive(GameObject g)
+    {
+        g.SetActive(!g.activeSelf);
     }
 }

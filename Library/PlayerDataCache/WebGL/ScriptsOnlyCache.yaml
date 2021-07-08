@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Manager
     - Scenario
+    - TEdit
+    - Volume
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -11,6 +13,7 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -50,8 +53,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Outline
-    - UnityEngine.UI.RawImage
     - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Main.unity:
@@ -69,18 +72,26 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1500}
+      Script: {instanceID: 1502}
     - Class: 114
       Script: {instanceID: 1660}
     - Class: 114
       Script: {instanceID: 2134}
-    - Class: 114
-      Script: {instanceID: 2284}
     - Class: 114
       Script: {instanceID: 2588}
     - Class: 114
@@ -100,6 +111,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4986}
     - Class: 114
+      Script: {instanceID: 5106}
+    - Class: 114
       Script: {instanceID: 5192}
     - Class: 114
       Script: {instanceID: 5460}
@@ -113,6 +126,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6406}
     - Class: 114
       Script: {instanceID: 6660}
+    - Class: 114
+      Script: {instanceID: 130658}
+    - Class: 114
+      Script: {instanceID: 260216}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -120,6 +137,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1006,6 +1025,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 382f8f8faec6d3c0d8e1d676bc3ac575
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TEdit
+  - hash:
+      serializedVersion: 2
+      Hash: 7042f037f2e990b00d05282222740edc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Volume
   platform: 20
   scenePathNames:
   - Assets/Scenes/Main.unity
