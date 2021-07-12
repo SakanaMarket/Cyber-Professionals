@@ -30,4 +30,9 @@ public class Volume : MonoBehaviour
     {
         return music_volume;
     }
+
+    public void Play_Sound(AudioClip a)
+    {
+        audio_source.PlayOneShot(a, .25f);
+    }
 }

@@ -13,7 +13,6 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -45,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -87,49 +87,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1502}
+      Script: {instanceID: 1504}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 2134}
+      Script: {instanceID: 1508}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 1666}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2142}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 2642}
     - Class: 114
-      Script: {instanceID: 4140}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 4158}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 4440}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 4986}
+      Script: {instanceID: 4148}
     - Class: 114
-      Script: {instanceID: 5106}
+      Script: {instanceID: 4166}
     - Class: 114
-      Script: {instanceID: 5192}
+      Script: {instanceID: 4448}
     - Class: 114
-      Script: {instanceID: 5460}
+      Script: {instanceID: 4994}
     - Class: 114
-      Script: {instanceID: 5790}
+      Script: {instanceID: 5114}
     - Class: 114
-      Script: {instanceID: 5968}
+      Script: {instanceID: 5200}
     - Class: 114
-      Script: {instanceID: 6298}
+      Script: {instanceID: 5796}
     - Class: 114
-      Script: {instanceID: 6406}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 6660}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 130658}
+      Script: {instanceID: 6412}
     - Class: 114
-      Script: {instanceID: 260216}
+      Script: {instanceID: 7086}
+    - Class: 114
+      Script: {instanceID: 7668}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,6 +151,18 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -179,6 +193,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 7042f037f2e990b00d05282222740edc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Volume
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -703,12 +723,6 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
@@ -803,12 +817,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDragMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Outline
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -955,6 +963,12 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
+      Hash: 382f8f8faec6d3c0d8e1d676bc3ac575
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TEdit
+  - hash:
+      serializedVersion: 2
       Hash: 63bdc2cf3273aa9bf650350f19d2af61
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
@@ -1025,19 +1039,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 382f8f8faec6d3c0d8e1d676bc3ac575
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TEdit
-  - hash:
-      serializedVersion: 2
-      Hash: 7042f037f2e990b00d05282222740edc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Volume
   platform: 20
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Sakana/Desktop/PPTEST/CyPro
+  playerPath: C:/Users/Sakana/Documents/GitHub/Cyber Professionals/V1.0
